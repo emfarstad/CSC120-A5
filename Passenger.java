@@ -1,5 +1,6 @@
 public class Passenger {
     
+    /** the name of the Passenger*/
     private String name;
 
     /**

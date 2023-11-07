@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 
 public class Car {
+
+    /** An arraylist of Passenger objects representing the passengers on the train car*/
     private ArrayList<Passenger> passengersOnboard;
+
+    /** the maximum capacity of passengers that can be on the train car*/
     private int maxCapacity;
 
     /**

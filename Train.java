@@ -1,7 +1,10 @@
 import java.util.ArrayList;
 
 public class Train {
+
+    /** The engine object for the train*/
     private final Engine engine;
+    /** An arrayList of Car objects representing the cars attached to the train*/
     private ArrayList<Car> cars;
 
     /**

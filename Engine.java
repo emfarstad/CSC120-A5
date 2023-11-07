@@ -1,7 +1,10 @@
 public class Engine {
+    /** the fuelType, one of STEAM, INTERNAL_COMBUSTION, ELECTRIC, OTHER */
     private FuelType f;
-    double currentFuelLevel;
-    final double maxFuelLevel;
+    /** the current fuel level of the engine, between 0 and the maxFuelLevel value*/
+    private double currentFuelLevel;
+    /** the maximum capacity of the engine's fuel tank*/
+    private final double maxFuelLevel;
 
     /**
      * Constructs an engine with a given FuelType and a given maxFuelLevel and sets currentFuelLevel to 0
@@ -15,6 +18,14 @@ public class Engine {
     }
 
     /**
+     * Returns the current fuel level of the engine
+     * @return the current fuel level of the engine as a double
+     */
+    public double getCurrentFuelLevel() {
+        return this.currentFuelLevel;
+    }
+
+    /**
      * Sets currentFuelLevel of the engine to maxFuelLevel
      */
     public void refuel() {
@@ -25,7 +36,7 @@ public class Engine {
      * If the currentFuelLevel is greater or equal to 10, the currentFuelLevel is depleted by 10 and a statement is printed with the new fuel level
      */
     public void go() {
-        if(!(this.currentFuelLevel >= 10)) {
+        if(getCurrentFuelLevel() < 10) {
             throw new RuntimeException("Current fuel level is too low, please refuel the engine.");
         }
         this.currentFuelLevel = this.currentFuelLevel - 10;
